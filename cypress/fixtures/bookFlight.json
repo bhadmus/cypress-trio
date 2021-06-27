@@ -1,0 +1,7 @@
+{
+    "flightType": ".mr-2.select-md.way-select > ng-select[role='listbox'] > .ng-has-value.ng-select-container",
+    "tripType": ".ng-dropdown-panel",
+    "roundTrip": ".ng-option:nth-child(1)",
+    "flightGroup": ".mt-sm-0.select-md > .ng-select > .ng-select-container > .ng-value-container > .ng-value > .ng-value-label",
+    "businessClass": ".ng-option:nth-of-type(3)"
+}

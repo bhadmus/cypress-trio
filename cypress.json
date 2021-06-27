@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://wkn-web-dev.azurewebsites.net/",
+    "viewportHeight": 900,
+    "viewportWidth": 1400,
+    "defaultCommandTimeout": 15000
+}
