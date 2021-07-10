@@ -14,5 +14,11 @@ class PageActions{
     viewElementText(element, text){
         cy.get(element).should('contains', text);
     }
+    scroll(position){
+        cy.scrollTo(position);
+    }
+    scrollToElement(element){
+        cy.get(element).scrollIntoView();
+    }
 }
 export default PageActions

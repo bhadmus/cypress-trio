@@ -1,0 +1,11 @@
+{
+    "shopItemButton": ".product:nth-of-type(2)>.product-action > button",
+    "cartIcon": ".cart > .cart-icon",
+    "shoppingCart": "ul.cart-items",
+    "checkoutBtn": ".action-block > button",
+    "checkOut": "PROCEED TO CHECKOUT",
+    "cartButton": ":nth-child(14)",
+    "agreeBtn": ".chkAgree",
+    "proceedBtn": ".wrapperTwo > button",
+    "selectCountry": "select"
+}
