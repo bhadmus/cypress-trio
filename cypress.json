@@ -2,5 +2,6 @@
     "baseUrl": "https://rahulshettyacademy.com/seleniumPractise/#/",
     "viewportHeight": 900,
     "viewportWidth": 1400,
-    "defaultCommandTimeout": 15000
+    "defaultCommandTimeout": 15000,
+    "testFile": "**/*.{feature, features}"
 }

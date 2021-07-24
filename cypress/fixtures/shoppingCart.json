@@ -1,5 +1,6 @@
 {
-    "shopItemButton": ".product:nth-of-type(2)>.product-action > button",
+    "cauliFlower": ".product:nth-of-type(2)>.product-action > button",
+    "tomato": ":nth-child(6) > .product-action > button",
     "cartIcon": ".cart > .cart-icon",
     "shoppingCart": "ul.cart-items",
     "checkoutBtn": ".action-block > button",
@@ -7,5 +8,6 @@
     "cartButton": ":nth-child(14)",
     "agreeBtn": ".chkAgree",
     "proceedBtn": ".wrapperTwo > button",
-    "selectCountry": "select"
+    "selectCountry": "select",
+    "country": "Nigeria"
 }
