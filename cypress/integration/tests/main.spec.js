@@ -1,5 +1,6 @@
 import PageActions from '../../support/PageResources/pageActions'
 const pages = new PageActions();
+
 context('Buy items on greenKart', ()=>{
     beforeEach(()=>{
         cy.visit('/');
