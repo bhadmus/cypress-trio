@@ -14,3 +14,5 @@ Feature: Shopping Test
      And I click on "agree" button
      And I click on "proceed" button
      Then I should see a success message
+
+  Scenario
