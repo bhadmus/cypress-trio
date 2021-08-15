@@ -9,5 +9,7 @@
     "agreeBtn": ".chkAgree",
     "proceedBtn": ".wrapperTwo > button",
     "selectCountry": "select",
-    "country": "Nigeria"
+    "country": "Nigeria",
+    "messageBanner": ".wrapperTwo",
+    "successMessage": "You'll be redirected to Home page shortly"
 }
