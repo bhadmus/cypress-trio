@@ -15,4 +15,4 @@ Feature: Shopping Test
      And I click on "proceed" button
      Then I should see a success message
 
-  Scenario
+  Scenario: A user should be 

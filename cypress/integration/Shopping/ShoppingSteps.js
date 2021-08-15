@@ -34,8 +34,24 @@ Then (/^I should see the shopping cart$/, function (){
     });
 });
 And (/^I select the destination country$/, function (){
-
+    cy.fixture('shoppingCart').then((shop)=> {
+        cy.get(shop.selectCountry).select(shop.country);
+    
+    });
 });
-Then (/^I should see a success message$/, function (){
 
+And (/^ I click on "agree" button$/, function (){
+    cy.fixture('shoppingCart').then((shop)=> {
+        pages.clickElement(shop.agreeBtn);
+    });
+});
+And (/^ I click on "proceed" button$/, function (){
+    cy.fixture('shoppingCart').then((shop)=> {
+    pages.clickElement(shop.proceedBtn);
+    });
+    });
+Then (/^I should see a success message$/, function (){
+    cy.fixture('shoppingCart').then((shop)=> {
+        });
+    
 });
