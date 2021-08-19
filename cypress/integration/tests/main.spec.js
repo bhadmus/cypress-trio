@@ -6,9 +6,9 @@ context('Buy items on greenKart', ()=>{
         cy.visit('/');
     });
     it('Buy Cauliflower', ()=>{
-        // Launch the wakanow site
+        // Shopping for Cauliflower
         
-        // Click on the Flight type to pick Round Trip
+        // First shopping Scenerio
        cy.fixture("shoppingCart").then((shop)=>{
        pages.pageWait(shop.cauliFlower);
        pages.clickElement(shop.cauliFlower);
@@ -25,9 +25,9 @@ context('Buy items on greenKart', ()=>{
     });
 
     it('Buy Tomato', ()=>{
-        // Launch the wakanow site
+        // Shopping for Tomato 
         
-        // Click on the Flight type to pick Round Trip
+        // Second  shopping Scenerio
        cy.fixture("shoppingCart").then((shop)=>{
        pages.pageWait(shop.tomato);
        pages.clickElement(shop.tomato);

@@ -55,3 +55,54 @@ Then (/^I should see a success message$/, function (){
     });
 
 });
+// Tomato Session Shopping for Tomato 
+
+When (/^I click on "([^"]*)" product$/, function (product){
+    cy.fixture("shoppingCart").then((shop)=>{
+    switch (product) {
+        case "Tomato":
+            pages.pageWait(shop.tomato);
+            pages.clickElement(shop.tomato);
+    }    
+    });
+
+});
+And (/^I click on "([^"]*)" button$/, function (button){
+    cy.fixture("shoppingCart").then((shop)=>{
+    switch (button) {
+        case "cart":
+            pages.clickElement(shop.cartIcon);
+            break;
+        case "checkout":
+            cy.get(shop.checkoutBtn).contains(shop.checkOut).click();
+            break;
+        case "save cart":
+            cy.wait(3000)
+            pages.clickElement(shop.cartButton);
+            break;
+        case "agree":
+            pages.clickElement(shop.agreeBtn);
+            break;
+        case "proceed":
+            pages.clickElement(shop.proceedBtn);
+
+    }    
+    })
+});
+Then (/^I should see the shopping cart$/, function (){
+    cy.fixture('shoppingCart').then((shop)=> {
+        pages.pageWait(shop.shoppingCart);
+    });
+});
+And (/^I select the destination country$/, function (){
+    cy.fixture('shoppingCart').then((shop)=> {
+    pages.pageWait(shop.selectCountry);
+    cy.get(shop.selectCountry).select(shop.country);
+    });
+});
+Then (/^I should see a success message$/, function (){
+    cy.fixture('shoppingCart').then((shop)=>{
+    pages.viewElementText(shop.messageBanner, shop.successMessage)    
+    });
+
+});
