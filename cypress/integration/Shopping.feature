@@ -3,8 +3,12 @@ Feature: Shopping Test
 
     Testing two shopping scenarios
 
+    Background: 
+    
+      Given I am on the greenKart site
+
    Scenario: A user should be able to shop for cauli flower successfully
-     Given I am on the greenKart site
+     
      When I click on "Cauli Flower" product
      And I click on "cart" button
      Then I should see the shopping cart
@@ -15,8 +19,7 @@ Feature: Shopping Test
      And I click on "proceed" button
      Then I should see a success message
 
-  Scenario: A user should be able to shop for Tomato  successfully
-     Given I am on the greenKart site
+   Scenario: A user should be able to shop for tomato successfully
      When I click on "Tomato" product
      And I click on "cart" button
      Then I should see the shopping cart
