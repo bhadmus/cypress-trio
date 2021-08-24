@@ -6,12 +6,16 @@ const pages = new PageActions();
 Given (/^I am on the greenKart site$/, function (){
     cy.visit('/');
 });
-When (/^I click on "([^"]*)" product$/, function (product){
+When ('I click on {string} product', function (string){
     cy.fixture("shoppingCart").then((shop)=>{
-    switch (product) {
+    switch (string) {
         case "Cauli Flower":
             pages.pageWait(shop.cauliFlower);
             pages.clickElement(shop.cauliFlower);
+            break
+        case "Tomato":
+            pages.pageWait(shop.tomato);
+            pages.clickElement(shop.tomato);
     }    
     });
 
@@ -38,20 +42,29 @@ And (/^I click on "([^"]*)" button$/, function (button){
     }    
     })
 });
+
 Then (/^I should see the shopping cart$/, function (){
-    cy.fixture('shoppingCart').then((shop)=> {
+    //cy.fixture('shoppingCart').then((shop)=> {
+    cy.fixture('shoppingCart').then(function(shop) {
         pages.pageWait(shop.shoppingCart);
     });
 });
+
 And (/^I select the destination country$/, function (){
     cy.fixture('shoppingCart').then((shop)=> {
     pages.pageWait(shop.selectCountry);
     cy.get(shop.selectCountry).select(shop.country);
     });
 });
+
 Then (/^I should see a success message$/, function (){
     cy.fixture('shoppingCart').then((shop)=>{
     pages.viewElementText(shop.messageBanner, shop.successMessage)    
     });
 
 });
+
+
+
+
+

@@ -5,7 +5,7 @@ context('Buy items on greenKart', ()=>{
     beforeEach(()=>{
         cy.visit('/');
     });
-    it('Buy Cauliflower', ()=>{
+    it.only('Buy Cauliflower', ()=>{
         // Launch the wakanow site
         
         // Click on the Flight type to pick Round Trip

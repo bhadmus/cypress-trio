@@ -12,7 +12,7 @@ class PageActions{
         cy.get(element).should('be.visible');
     }
     viewElementText(element, text){
-        cy.get(element).should('contains', text);
+        cy.get(element).should('contain', text);
     }
     scroll(position){
         cy.scrollTo(position);
